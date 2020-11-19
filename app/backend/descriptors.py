@@ -3,8 +3,8 @@ from rdkit.Chem import Descriptors
 import numpy as np
 import pandas as pd
 
-from core.images.imageGen import GenImage
-from core.utils import Utils
+from backend.images.imageGen import GenImage
+from backend.utils import Utils
 
 class showDescriptors():
 

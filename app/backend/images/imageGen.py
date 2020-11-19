@@ -9,8 +9,8 @@ class GenImage():
 
         fig = Draw.MolToMPL(mol)
         plt.axis('on')
-        fig.savefig('./core/images/singleMol.jpeg', bbox_inches='tight')
+        fig.savefig('./backend/images/singleMol.jpeg', bbox_inches='tight')
         # plt.show()
 
-        img = plt.imread('./core/images/singleMol.jpeg')
+        img = plt.imread('./backend/images/singleMol.jpeg')
         return img

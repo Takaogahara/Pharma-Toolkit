@@ -11,15 +11,16 @@ class Run:
         column1, column2 = st.beta_columns(2)
 
         if smiles:
+            descriptors, img = showDescriptors.getSingle(smiles)
             try:
-                descriptors, img = showDescriptors.getSingle(smiles)
+                pass
             except:
                 column1.write('ERROR: Check input smiles')
                 column2.write('ERROR: Check input smiles')
 
-            with st.beta_container():
-                column1.dataframe(data=descriptors, height=1500)
-                column2.image(img, caption=smiles, width=400)
+            
+            column1.dataframe(data=descriptors, height=1500)
+            column2.image(img, caption=smiles, width=400)
 
  #----------------------------------------------------------------------------
 
