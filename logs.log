@@ -1,0 +1,144 @@
+2020-11-19 23:20:30,378:INFO:Initializing load_model()
+2020-11-19 23:20:30,416:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel.pkl)
+2020-11-19 23:21:12,150:INFO:Initializing load_model()
+2020-11-19 23:21:12,187:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel)
+2020-11-19 23:21:19,520:INFO:Initializing predict_model()
+2020-11-19 23:21:19,521:INFO:predict_model(display=None, ml_usecase=MLUsecase.REGRESSION, verbose=True, round=4, encoded_labels=True, probability_threshold=None, estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='regression', target='logS')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         '...
+                ('fix_perfect', Remove_100(target='logS')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 ExtraTreesRegressor(criterion='mae', max_depth=11,
+                                     max_features=1.0,
+                                     min_impurity_decrease=0.001,
+                                     min_samples_leaf=6, min_samples_split=5,
+                                     n_estimators=300, n_jobs=-1,
+                                     random_state=6399)]]))
+2020-11-19 23:21:19,531:INFO:Checking exceptions
+2020-11-19 23:21:19,532:INFO:Preloading libraries
+2020-11-19 23:21:59,224:INFO:Initializing load_model()
+2020-11-19 23:21:59,255:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel)
+2020-11-19 23:21:59,700:INFO:Initializing predict_model()
+2020-11-19 23:21:59,701:INFO:predict_model(display=None, ml_usecase=MLUsecase.REGRESSION, verbose=True, round=4, encoded_labels=True, probability_threshold=None, estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='regression', target='logS')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         '...
+                ('fix_perfect', Remove_100(target='logS')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 ExtraTreesRegressor(criterion='mae', max_depth=11,
+                                     max_features=1.0,
+                                     min_impurity_decrease=0.001,
+                                     min_samples_leaf=6, min_samples_split=5,
+                                     n_estimators=300, n_jobs=-1,
+                                     random_state=6399)]]))
+2020-11-19 23:21:59,891:INFO:Checking exceptions
+2020-11-19 23:21:59,930:INFO:Preloading libraries
+2020-11-19 23:24:17,501:INFO:Initializing load_model()
+2020-11-19 23:24:17,502:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel)
+2020-11-19 23:24:19,959:INFO:Initializing predict_model()
+2020-11-19 23:24:19,960:INFO:predict_model(display=None, ml_usecase=MLUsecase.REGRESSION, verbose=True, round=4, encoded_labels=True, probability_threshold=None, estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='regression', target='logS')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         '...
+                ('fix_perfect', Remove_100(target='logS')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 ExtraTreesRegressor(criterion='mae', max_depth=11,
+                                     max_features=1.0,
+                                     min_impurity_decrease=0.001,
+                                     min_samples_leaf=6, min_samples_split=5,
+                                     n_estimators=300, n_jobs=-1,
+                                     random_state=6399)]]))
+2020-11-19 23:24:20,221:INFO:Checking exceptions
+2020-11-19 23:24:20,223:INFO:Preloading libraries
+2020-11-19 23:33:20,582:INFO:Initializing load_model()
+2020-11-19 23:33:20,583:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel)
+2020-11-19 23:33:23,884:INFO:Initializing predict_model()
+2020-11-19 23:33:23,885:INFO:predict_model(display=None, ml_usecase=MLUsecase.REGRESSION, verbose=True, round=4, encoded_labels=True, probability_threshold=None, estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='regression', target='logS')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         '...
+                ('fix_perfect', Remove_100(target='logS')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 ExtraTreesRegressor(criterion='mae', max_depth=11,
+                                     max_features=1.0,
+                                     min_impurity_decrease=0.001,
+                                     min_samples_leaf=6, min_samples_split=5,
+                                     n_estimators=300, n_jobs=-1,
+                                     random_state=6399)]]))
+2020-11-19 23:33:23,985:INFO:Checking exceptions
+2020-11-19 23:33:23,987:INFO:Preloading libraries
+2020-11-19 23:42:52,083:INFO:Initializing load_model()
+2020-11-19 23:42:52,085:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel)
+2020-11-19 23:42:52,562:INFO:Initializing predict_model()
+2020-11-19 23:42:52,562:INFO:predict_model(display=None, ml_usecase=MLUsecase.REGRESSION, verbose=True, round=4, encoded_labels=True, probability_threshold=None, estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='regression', target='logS')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         '...
+                ('fix_perfect', Remove_100(target='logS')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 ExtraTreesRegressor(criterion='mae', max_depth=11,
+                                     max_features=1.0,
+                                     min_impurity_decrease=0.001,
+                                     min_samples_leaf=6, min_samples_split=5,
+                                     n_estimators=300, n_jobs=-1,
+                                     random_state=6399)]]))
+2020-11-19 23:42:52,571:INFO:Checking exceptions
+2020-11-19 23:42:52,573:INFO:Preloading libraries
+2020-11-19 23:52:21,798:INFO:Initializing load_model()
+2020-11-19 23:52:21,799:INFO:load_model(verbose=True, authentication=None, platform=None, model_name=./models/solubility/solubilityModel)

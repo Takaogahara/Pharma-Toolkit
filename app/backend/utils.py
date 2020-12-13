@@ -1,15 +1,15 @@
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Lipinski
+from pycaret.regression import *
 import numpy as np
 import pandas as pd
 
+from backend.images.imageGen import GenImage
 
 class Utils():
 
-    def getDescriptors(smiles:str):
+    def getDescriptors(mol):
         RO5_violations = 0
-
-        mol = Chem.MolFromSmiles(smiles)
 
         # ! Descriptors
         desc_LogP = Descriptors.MolLogP(mol)
@@ -26,6 +26,7 @@ class Utils():
         desc_RingCount = Lipinski.RingCount(mol)
         desc_NumAromaticRings = Lipinski.NumAromaticRings(mol)
         desc_AromaticAtoms = Utils.AromaticAtoms(mol)
+        desc_AromaticProportion = desc_AromaticAtoms/desc_HeavyAtomCount
 
         # ! Lipinski rule of 5
         if desc_LogP > 5:
@@ -50,6 +51,7 @@ class Utils():
                             desc_RingCount,
                             desc_NumAromaticRings,
                             desc_AromaticAtoms,
+                            desc_AromaticProportion,
                             RO5_violations])
 
         names = ['LogP',
@@ -64,11 +66,12 @@ class Utils():
                     'Ring Count',
                     'Num Aromatic Rings',
                     'Aromatic Atoms',
+                    'Aromatic Proportion',
                     'Num Rule of 5 Violations']
 
         return values, names
 
- # ---------------------------------------------------------------------------------
+ # -------------------------------
 
     def AromaticAtoms(mol):
         aromatic_atoms = [mol.GetAtomWithIdx(i).GetIsAromatic() for i in range(mol.GetNumAtoms())]
@@ -78,8 +81,32 @@ class Utils():
         for elem in aromatic_atoms:
             if elem==True:
                 AA_count.append(1)
-                sum_AA_count = sum(AA_count)
+        sum_AA_count = sum(AA_count)
 
         return sum_AA_count
 
- # ---------------------------------------------------------------------------------
+ # ----------------------------------------------------------------------------------------------------------
+
+    def getPredLogS(smiles:str, descriptors):
+
+        desc_LogP = descriptors[0:1]
+        desc_MW = descriptors[1:2]
+        desc_RotatableBonds = descriptors[6:7]
+        desc_AromaticProportion = descriptors[12:13]
+
+        desc_array = [desc_LogP, desc_MW, desc_RotatableBonds, desc_AromaticProportion]
+        desc_names = ['LogP', 'Mol Wt', 'Num Rotatable Bonds', 'Aromatic Proportion']
+        desc_array = np.reshape(np.array(desc_array), (-1,len(desc_array)))
+
+        data = pd.DataFrame(data=desc_array, columns=desc_names)
+
+        model = load_model('./models/solubility/solubilityModel')
+        predict = predict_model(model, data = data)
+
+        predict_logS_value = predict.iloc[0]['Label']
+        predict_logS_df = pd.Series(data=predict_logS_value, index=['Predicted Solubility'])
+        predict_logS_df = predict_logS_df.rename(' ')
+        
+        return predict_logS_value, predict_logS_df
+
+ # ----------------------------------------------------------------------------------------------------------

@@ -3,19 +3,38 @@ from rdkit.Chem import Descriptors
 import numpy as np
 import pandas as pd
 
+from backend.bioisosteres import Bioisosteres
 from backend.images.imageGen import GenImage
 from backend.utils import Utils
 
 class showDescriptors():
 
     def getSingle(smiles:str):
+        mol = Chem.MolFromSmiles(smiles)
 
-        image = GenImage.getSingle(smiles)
-        data, dataName = Utils.getDescriptors(smiles)
+        # * Get IMG
+        image = GenImage.getSingle(mol)
 
+        # * Get descriptors
+        data, dataName = Utils.getDescriptors(mol)
         descriptors = pd.DataFrame(data=data, columns=['Value'], index=dataName)
 
-        return descriptors, image
+        # * Get prediction
+        _, pred_LogS = Utils.getPredLogS(smiles, data)
+
+        # # * Get Bioisosteres
+        # isostereReactions = []
+        # isosteres = Bioisosteres.getBioisosteresList():
+        # for iso in isosteres:
+        #     isostere = Bioisosteres.buildIsostereReaction(mol, iso)
+        #     isostereReactions.append(isostere)
+
+
+        # isostereReactions =[ for x in isosteres]
+        # # image = Utils.getBioisosteres(mol)
+
+
+        return descriptors, image, pred_LogS
 
  # ---------------------------------------------------------------------------------
 

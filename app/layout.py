@@ -6,21 +6,36 @@ from backend.utils import Utils
 class Run:
 
     def SingleSmiles(smiles):
-        st.write("""### Single smiles""")
+        st.write("""### **Descriptors**""")
+        col_desc = st.beta_columns(2)
 
-        column1, column2 = st.beta_columns(2)
+        st.write("""### **Solubility**""")
+        col_sol = st.beta_columns(2)
+
+        st.write("""### **Bioisosteres**""")
+        col_bioiso = st.beta_columns(2)
 
         if smiles:
-            descriptors, img = showDescriptors.getSingle(smiles)
-            try:
-                pass
-            except:
-                column1.write('ERROR: Check input smiles')
-                column2.write('ERROR: Check input smiles')
 
-            
-            column1.dataframe(data=descriptors, height=1500)
-            column2.image(img, caption=smiles, width=400)
+            try:
+                descriptors, img, pred_LogS = showDescriptors.getSingle(smiles)
+
+                with st.beta_container():
+                    col_desc[0].dataframe(data=descriptors, height=1500)
+                    col_desc[1].image(img, caption=smiles, width=400)
+                
+                with st.beta_container():
+                    col_sol[0].write(pred_LogS)
+                    col_sol[1].write('Implemented from Delaney JS. 2004 J. Chem. Inf. Model')
+                    
+                with st.beta_container():
+                    col_bioiso[0].write('Bioisosteres')
+                    # isostereReactions =[buildIsostereReaction(amide,x) for x in isosteres]
+                    # image = Utils.getBioisosteres(smiles)
+
+            except:
+                col_desc[0].write('ERROR: Check input smiles')
+                col_desc[1].write('ERROR: Check input smiles')
 
  #----------------------------------------------------------------------------
 

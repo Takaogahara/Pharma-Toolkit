@@ -1,8 +1,9 @@
 from layout import Run
 import streamlit as st
+
 # * Header
 st.write("""
-# Molecular Descriptors Calculation
+# Pharma Toolkit
 test version
 """)
 
