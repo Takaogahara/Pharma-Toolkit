@@ -1,5 +1,5 @@
 import streamlit as st
-from apps import home, moldesc
+from apps import home, calc_fingerprints
 
 # ----------------------------------------------------------------
 
@@ -30,7 +30,7 @@ st.markdown('''# Pharma Toolkit''')
 
 app.add_app('Home', home.app)
 # app.add_app('Dataset Validation', home.app)
-app.add_app('Calculate fingerprints', moldesc.app)
+app.add_app('Calculate fingerprints', calc_fingerprints.app)
 # app.add_app('Calculate descriptors', home.app)
 # app.add_app('Regression / Classification', home.app)
 # app.add_app('SMILES to image', home.app)

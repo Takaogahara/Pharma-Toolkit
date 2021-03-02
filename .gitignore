@@ -1,6 +1,5 @@
 /.vscode/
-/backend/__pycache__/
+/__pycache__/
 
-/aplication/.vscode/
-/aplication/backend/__pycache__/
-/aplication/00/
+/apps/.vscode/
+/apps/__pycache__/
