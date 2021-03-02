@@ -1,4 +1,6 @@
 /.vscode/
 /backend/__pycache__/
 
-*.code-workspace
+/aplication/.vscode/
+/aplication/backend/__pycache__/
+/aplication/00/
