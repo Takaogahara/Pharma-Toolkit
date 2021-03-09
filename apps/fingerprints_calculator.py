@@ -51,18 +51,20 @@ def app():
     
     if uploaded_file is not None:
 
-        raw_df = pd.read_csv(uploaded_file, delimiter=selected_delimiter)
+        
 
         # Select column names and delimiter
         with st.sidebar.header('2. Enter column names for **Molecule ID** and **SMILES** and privide the CSV **delimiter**'):
 
-            index_columns = list(raw_df.columns)
-            moleculeColumn = st.sidebar.selectbox('Molecule ID' , index_columns)
-            smilesColumn = st.sidebar.selectbox('SMILES' , index_columns)
-
             delimiter_dict = {',':',', ';':';'}
             user_delimiter = st.sidebar.selectbox('Choose CSV file delimiter', list(delimiter_dict.keys()))
             selected_delimiter = delimiter_dict[user_delimiter]
+
+            raw_df = pd.read_csv(uploaded_file, delimiter=selected_delimiter)
+
+            index_columns = list(raw_df.columns)
+            moleculeColumn = st.sidebar.selectbox('Molecule ID' , index_columns)
+            smilesColumn = st.sidebar.selectbox('SMILES' , index_columns)
 
         # Select fingerprint type and DF size
         with st.sidebar.header('3. Set parameters'):
