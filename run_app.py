@@ -1,5 +1,5 @@
 import streamlit as st
-from apps import home, calc_fingerprints
+from apps import home, fingerprints_calculator, dataset_filter
 
 # ----------------------------------------------------------------
 
@@ -29,11 +29,10 @@ app = MultiApp()
 st.markdown('''# Pharma Toolkit''')
 
 app.add_app('Home', home.app)
-# app.add_app('Dataset Validation', home.app)
-app.add_app('Calculate fingerprints', calc_fingerprints.app)
+app.add_app('Dataset Filter', dataset_filter.app)
+app.add_app('Fingerprints Calculator', calc_fingerprints.app)
 # app.add_app('Calculate descriptors', home.app)
 # app.add_app('Regression / Classification', home.app)
 # app.add_app('SMILES to image', home.app)
 
-# The main app
 app.run()

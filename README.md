@@ -1,7 +1,8 @@
 # Pharma Toolkit
 
 ## Usage
-[Pharma Toolkit](https://share.streamlit.io/takaogahara/pharma-toolkit/run_app.py)
+Launch the web app:  
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/takaogahara/pharma-toolkit/run_app.py)
 
 ---
 

@@ -1,5 +1,6 @@
 /.vscode/
 /__pycache__/
+/tests/
 
 /apps/.vscode/
 /apps/__pycache__/

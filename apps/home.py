@@ -5,14 +5,21 @@ def app():
     with st.beta_container():
         st.markdown("""### About """)
 
+    with st.beta_expander('Dataset Filter'):
+        st.markdown("""
+        ### Dataset Filter
 
-    with st.beta_container():
+        Placeholder
+        """)
+
+
+    with st.beta_expander('Molecular Fingerprint Calculator'):
         st.markdown("""
         ### Molecular Fingerprint Calculator
 
         This module allows the calculation of **molecular fingerprints** used in computational drug discovery projects such as for the construction of quantitative structure-activity/property relationship (QSAR/QSPR) models.  
 
-        There is 12 **molecular fingerprints** avaliable:
+        There are 12 **molecular fingerprints** avaliable:
         """)
 
         col1_fp, col2_fp, col3_fp = st.beta_columns(3)

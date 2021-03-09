@@ -1,0 +1,37 @@
+Molecule ChEMBL ID,Smiles,Assay Organism,Molecular Weight,Converted Value,Converted Units,Activity
+CHEMBL3814036,C[C@@H]1[C@H]2C3=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@@]4(C)[C@]3(C)CC[C@@]2(C(=O)OCc2cn(CC(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)O)nn2)CC[C@H]1C,Escherichia coli ATCC 25922,1064.39,14700000.0,uM,Inactive
+CHEMBL457077,O=C(/C=C/c1ccc(O)c(O)c1/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,Escherichia coli BL21(DE3),494.45,252.80614824552532,uM,Active
+CHEMBL4213957,CCNCc1cc2cc(-c3[nH]c(=O)c(C(=O)O)c(O)c3CC)ccc2n1C,Escherichia coli ATCC 25922,369.42,4331.113637594067,uM,Active
+CHEMBL4173433,CC(NN)=C1C(=O)NC(=O)NC1=O,Escherichia coli ATCC 25922,184.16,200000000.0,uM,Inactive
+CHEMBL3628566,CC(C)C[C@H](NC1=CC(=O)C=C(C(C)(C)C)C1=O)C(=O)O,Escherichia coli ATCC 25922,293.36,265880000.0,uM,Inactive
+CHEMBL4225286,CCCCCCCCCCn1c(Cn2cnc3c(N4CCOCC4)ncnc32)nc2ccccc21,Escherichia coli ATCC 25922,475.64,269111.09242284077,uM,Inactive
+CHEMBL4225749,O=C1NC(=O)C2(Cc3cc(N4C[C@H](CO)OC4=O)ccc3N3CCOCC32)C(=O)N1,Escherichia coli str. K-12 substr. MG1655,416.39,76851.02908331131,uM,Inactive
+CHEMBL4066982,C[C@@H](O)[C@H](NC1CCN(C)c2cc(C#Cc3ccc(CN4CCOCC4)cc3)ccc21)C(=O)NO,Escherichia coli ATCC 25922,478.59,4178.942309701414,uM,Active
+CHEMBL3739821,CN(CCO)C[C@H]1CN(c2ccc(-n3cc(-c4ccccn4)cn3)c(F)c2)C(=O)O1,Escherichia coli ATCC 25922,411.44,77775.61734396267,uM,Inactive
+CHEMBL4210587,N=C(N)NCCC[C@H](N)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@@H](CCCNC(=N)N)C(N)=O,Escherichia coli ATCC 25922,1690.05,8000000.0,uM,Inactive
+CHEMBL3736083,CO/N=C1/CN(c2nc3c(cc2F)c(=O)c(C(=O)O)cn3-c2nc(N)c(F)cc2F)CC1(C)CNC1CC1,Escherichia coli ATCC 25922,531.5,30103.48071495767,uM,Inactive
+CHEMBL4172012,CCn1cc(C(=O)O)c(=O)c2cnc(N3CCN(Cc4cn(CC(=O)N[C@@H](Cc5ccccc5)C(=O)O)nn4)CC3)nc21,Escherichia coli ATCC 25922,589.61,65564.36576720551,uM,Inactive
+CHEMBL4277483,OC(Cn1cncn1)(Cn1c2ccccc2c2cc(Br)ccc21)c1ccc(F)cc1F,Escherichia coli ATCC 25922,483.32,66208.72299925514,uM,Inactive
+CHEMBL4065174,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](OC(=O)NCc3cn(Cc4c(Cl)cccc4Cl)nn3)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)CN(C)[C@H](C)[C@@H](OC(=O)NCc2ccc(OC)cc2)[C@]1(C)O,Escherichia coli ATCC 25922,1195.29,13385.872884404624,uM,Inactive
+CHEMBL4104792,Cc1cc(F)ccc1Nc1c2ccccc2[n+](C)c2c1oc1ccccc12.[I-],Escherichia coli ATCC 25922,484.31,24777.51853151907,uM,Inactive
+CHEMBL4159310,CCCCCN(CCCCC)C(=O)[C@@H](N)CCCCN.Cl.Cl,Escherichia coli ATCC 25922,358.4,357142.85714285716,uM,Inactive
+CHEMBL4076729,CC[C@H](C)[C@H](NC(=O)[C@@H](Cc1ccccc1)NC)C(=O)N[C@@H](CO)C(=O)N[C@H](CN)C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@@H](CN)C(=O)N[C@H]1C(=O)N[C@@H](CN)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H]([C@@H](C)CC)C(=O)O[C@H]1C)[C@@H](C)CC)[C@@H](C)CC,Escherichia coli ATCC 25922,1188.48,53850.296176628966,uM,Inactive
+CHEMBL4227643,COC(=O)NC[C@H]1CN(c2ccc(-c3ccc4c(c3)CC3(C(=O)NC(=O)NC3=O)C3COCCN43)c(F)c2)C(=O)O1,Escherichia coli str. K-12 substr. MG1655,567.53,56384.68451006995,uM,Inactive
+CHEMBL4077261,CCc1c(-c2ccc(N3CCC(N(C)C)C3)cc2)[nH]c(=O)c(C(=O)O)c1O,Escherichia coli ATCC 25922,371.44,8345.897049321558,uM,Active
+CHEMBL4299346,CNCC1=CC[C@H](N)[C@H](O[C@@H]2[C@@H](N)C[C@@H](N)[C@H](O)[C@H]2O[C@@H]2O[C@H](CO)[C@@H](O[C@@H]3O[C@H](CN)[C@H](O)[C@@H](O)[C@@H]3N)[C@H]2O)O1,Escherichia coli ATCC 25922,594.66,13453.06561732755,uM,Inactive
+CHEMBL4064474,CC(C)(C)c1cc(-n2cc(CCCNC(=N)N)nn2)cc(C(C)(C)C)c1.Cl,Escherichia coli ATCC 25922,392.98,40714.54018016184,uM,Inactive
+CHEMBL4165238,CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(Cc4cn(-c5ccccc5)nn4)CC3)cc21,Escherichia coli ATCC 25922,476.51,300000.0,uM,Inactive
+CHEMBL4164136,CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(Cc4cn(CC(=O)N[C@@H](Cc5ccccc5)C(=O)O)nn4)CC3)cc21,Escherichia coli ATCC 25922,605.63,65564.36576720551,uM,Inactive
+CHEMBL4169402,CN1C(=O)C(=CNC(N)=S)C(=O)N(C)C1=O,Escherichia coli ATCC 25922,242.26,200000000.0,uM,Inactive
+CHEMBL4215096,CC(C)NCc1cc2cc3c(cc2n1C)OCCc1c-3[nH]c(=O)c(C(=O)O)c1O,Escherichia coli ATCC 25922,397.43,5032.332737840627,uM,Active
+CHEMBL4299347,NCC1=CC[C@H](N)[C@H](O[C@@H]2[C@@H](N)C[C@@H](N)[C@H](O)[C@H]2O[C@@H]2O[C@H](CO)[C@@H](O[C@@H]3O[C@H](CN)[C@H](O)[C@@H](O)[C@@H]3N)[C@H]2O)O1,Escherichia coli ATCC 25922,580.64,3444.475062000551,uM,Active
+CHEMBL4088756,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](OC(=O)NCc3cn(Cc4ccccc4)nn3)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)CN(C)[C@H](C)[C@@H](O)[C@]1(C)O,Escherichia coli ATCC 25922,963.22,33221.901538589314,uM,Inactive
+CHEMBL4073412,CC(C)CCOc1cc(C(N)=O)cc2ccccc12,Escherichia coli BW25113,257.33,248707.8848171609,uM,Inactive
+CHEMBL4162870,N#C/C(=C\c1cnc(N2CCOCC2)nc1)c1nc2ccccc2[nH]1,Escherichia coli ATCC 25922,332.37,83641.72458404789,uM,Inactive
+CHEMBL3781010,N=C(N/N=C/c1ccc(Br)cc1)N/N=C/c1ccc(Br)cc1,Escherichia coli ATCC 25922,423.11,400000000.0,uM,Inactive
+CHEMBL3818859,CCCC[n+]1cn(CCOc2ccccc2OCC)c2ccccc21.[Br-],Escherichia coli ATCC 25922,419.36,119229.3017932087,uM,Inactive
+CHEMBL4080883,N=C(NC1CCCCC1)c1ccc2cc(-c3ccc(Oc4ccc(-c5cc6ccc(C(=N)NC7CCCCC7)cc6[nH]5)cc4)cc3)[nH]c2c1,Escherichia coli ATCC 25922,648.85,98636.04839331123,uM,Inactive
+CHEMBL4103706,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](OC(=O)NCc3cn(Cc4ccccc4)nn3)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)CN(C)[C@H](C)[C@@H](OC(=O)NCc2ccccc2)[C@]1(C)O,Escherichia coli ATCC 25922,1096.37,14593.613469905236,uM,Inactive
+CHEMBL486422,O=c1c(-c2ccc(O)cc2)coc2cc(O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)ccc12,Escherichia coli str. K-12 substr. DH10B,416.38,240165.2336807724,uM,Inactive
+CHEMBL4077226,CCc1c(-c2ccc(N3C[C@H]4[C@H](N(C)C)[C@H]4C3)cc2)[nH]c(=O)c(C(=O)O)c1O,Escherichia coli ATCC 25922,383.45,32598.774286086842,uM,Inactive
+CHEMBL4215259,N=C(N)NCCC[C@H](N)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)N[C@@H](CCCNC(=N)N)C(N)=O,Escherichia coli ATCC 25922,1885.24,16000000.0,uM,Inactive
