@@ -33,7 +33,7 @@ def app():
         st.success(f'Number of molecules: {str(nmol)}')
         st.success(f'Number of descriptors: {str(ndesc-1)}')
         st.write(desc)
-        st.sidebar.markdown(_fileDownload(desc, f'descriptor_{user_fp}', 'Download CSV File'), unsafe_allow_html=True)
+        st.markdown(_fileDownload(desc, f'descriptor_{user_fp}', 'Download CSV File'), unsafe_allow_html=True)
 
     # ----------------------------------------------------------------------------------------------------------
     # Page title
@@ -47,14 +47,18 @@ def app():
     with st.sidebar.header('1. Upload your CSV data'):
         uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
         exemple_file = pd.read_csv('./apps/backend/PaDEL-Descriptor/example_CSV.csv')
-        st.sidebar.text('Example CSV input file')
         st.sidebar.markdown(_fileDownload(exemple_file, 'example_csv', 'Download example CSV file'), unsafe_allow_html=True)
     
     if uploaded_file is not None:
+
+        raw_df = pd.read_csv(uploaded_file, delimiter=selected_delimiter)
+
         # Select column names and delimiter
         with st.sidebar.header('2. Enter column names for **Molecule ID** and **SMILES** and privide the CSV **delimiter**'):
-            name_mol = st.sidebar.text_input('Enter column name for Molecule ID', 'molecule_id')
-            name_smiles = st.sidebar.text_input('Enter column name for SMILES', 'smiles')
+
+            index_columns = list(raw_df.columns)
+            moleculeColumn = st.sidebar.selectbox('Molecule ID' , index_columns)
+            smilesColumn = st.sidebar.selectbox('SMILES' , index_columns)
 
             delimiter_dict = {',':',', ';':';'}
             user_delimiter = st.sidebar.selectbox('Choose CSV file delimiter', list(delimiter_dict.keys()))
@@ -78,7 +82,6 @@ def app():
             selected_fp = fp_dict[user_fp]
 
             # Select number of molecules to compute
-            raw_df = pd.read_csv(uploaded_file, delimiter=selected_delimiter)
             number2calc = st.sidebar.slider('How many molecules to compute?', min_value=10, max_value=raw_df.shape[0], value=10, step=10)
 
             # Run fingerprint
@@ -96,7 +99,7 @@ def app():
 
         # Select columns to make SMI file and display dataframe
         try:
-            fingerprint_df = pd.concat([df[name_smiles], df[name_mol]], axis=1)
+            fingerprint_df = pd.concat([df[smilesColumn], df[moleculeColumn]], axis=1)
             st.subheader('Formatted as PADEL input file')
             st.write(fingerprint_df)
         except:
