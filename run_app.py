@@ -30,7 +30,7 @@ st.markdown('''# Pharma Toolkit''')
 
 app.add_app('Home', home.app)
 app.add_app('Dataset Filter', dataset_filter.app)
-app.add_app('Fingerprints Calculator', calc_fingerprints.app)
+app.add_app('Fingerprints Calculator', fingerprints_calculator.app)
 # app.add_app('Calculate descriptors', home.app)
 # app.add_app('Regression / Classification', home.app)
 # app.add_app('SMILES to image', home.app)
