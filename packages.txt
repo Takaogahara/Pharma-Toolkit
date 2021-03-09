@@ -1,2 +1,2 @@
 default-jre
-install python-rdkit librdkit1 rdkit-data
+sudo apt-get install python-rdkit librdkit1 rdkit-data
