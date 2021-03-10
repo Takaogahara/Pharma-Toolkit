@@ -17,20 +17,13 @@ def app():
         """)
 
         st.markdown("""####""")
-        with st.beta_expander('About the author'):
-            st.markdown("""
-            Placeholder # TODO - Provide text
-            """)
-
-        st.markdown("""####""")
-        with st.beta_expander('Credits'):
-            st.markdown("""
-            **Credits**  
-            - App built inspired in [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor)) applications
-            - Molecule handling done using [RDKit: Open-source cheminformatics.](https://www.rdkit.org/docs/index.html).
-            - Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) software.  
-            Yap CW. [PaDEL‐descriptor: An open source software to calculate molecular descriptors and fingerprints](https://doi.org/10.1002/jcc.21707). ***J Comput Chem*** 32 (2011) 1466-1474.
-            """)
+        st.markdown("""
+        **Credits**  
+        - App built inspired in [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor)) applications
+        - Molecule handling done using [RDKit: Open-source cheminformatics.](https://www.rdkit.org/docs/index.html).
+        - Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) software.  
+        Yap CW. [PaDEL‐descriptor: An open source software to calculate molecular descriptors and fingerprints](https://doi.org/10.1002/jcc.21707). ***J Comput Chem*** 32 (2011) 1466-1474.
+        """)
 
     st.markdown("""##""")
     with st.beta_expander('Dataset Filter'):
@@ -100,3 +93,9 @@ def app():
         - `Substructure`
         - `SubstructureCount`
         """)
+
+    st.markdown("""#""")
+    with st.beta_expander('About the author'):
+            st.markdown("""
+            Placeholder
+            """)

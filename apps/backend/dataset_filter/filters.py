@@ -62,7 +62,7 @@ class Filters:
             for df_units_index, current_df_units in enumerate(df_units):
 
                 if current_df_units == 'ug.mL-1':
-                    new_value = ((df_values[df_units_index] / df_MW[df_units_index]) * 1000) * 1000
+                    new_value = (df_values[df_units_index] / df_MW[df_units_index]) * 1000
 
                 elif current_df_units == 'uM':
                     new_value = df_values[df_units_index]
@@ -87,7 +87,7 @@ class Filters:
             for df_units_index, current_df_units in enumerate(df_units):
 
                 if current_df_units == 'ug.mL-1':
-                    new_value = (df_values[df_units_index] / df_MW[df_units_index]) * 1000
+                    new_value = (df_values[df_units_index] / df_MW[df_units_index])
 
                 elif current_df_units == 'uM':
                     new_value = df_values[df_units_index] / 1000
