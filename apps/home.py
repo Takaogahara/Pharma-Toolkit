@@ -16,7 +16,6 @@ def app():
         Read the description below for each module to understand how it works.
         """)
 
-        st.markdown("""####""")
         st.markdown("""
         **Credits**  
         - App built inspired in [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor)) applications
@@ -25,7 +24,7 @@ def app():
         Yap CW. [PaDEL‐descriptor: An open source software to calculate molecular descriptors and fingerprints](https://doi.org/10.1002/jcc.21707). ***J Comput Chem*** 32 (2011) 1466-1474.
         """)
 
-    st.markdown("""##""")
+    st.markdown("""###""")
     with st.beta_expander('Dataset Filter'):
         st.markdown("""
         ### Dataset Filter
@@ -61,7 +60,7 @@ def app():
         """)
         
 
-    st.markdown("""##""")
+    st.markdown("""###""")
     with st.beta_expander('Molecular Fingerprint Calculator'):
         st.markdown("""
         ### Molecular Fingerprint Calculator
@@ -94,6 +93,7 @@ def app():
         - `SubstructureCount`
         """)
 
+    st.markdown("""#""")
     st.markdown("""#""")
     with st.beta_expander('About the author'):
             st.markdown("""

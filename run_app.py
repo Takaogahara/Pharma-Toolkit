@@ -26,7 +26,7 @@ class MultiApp:
 
 app = MultiApp()
 
-st.markdown('''# Pharma Toolkit''')
+st.markdown("""# Pharma Toolkit""")
 
 app.add_app('Home', home.app)
 app.add_app('Dataset Filter', dataset_filter.app)
