@@ -203,6 +203,13 @@ def app():
             st.info(f'Number of molecules: {df_num}')
             st.info(f'NaN values: {nan_num}')
 
+            try:
+                active_num = len(selected_df[selected_df.Activity == 'Active'])
+                st.info(f'Active values: {active_num}')
+            except:
+                pass
+
+
             #@ Display selected dataset
             selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
             st.write(selected_df)
