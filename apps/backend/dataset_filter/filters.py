@@ -1,5 +1,6 @@
 import pandas as pd
 from rdkit import Chem
+import numpy as np
 
 class Filters:
 
@@ -52,6 +53,9 @@ class Filters:
         standard_units = threshold_columns[1]
         molecular_weight = threshold_columns[2]
 
+        standard_list = ['ug.mL-1', 'nM', 'uM']
+        df = df[df[str(standard_units)].isin(standard_list)]
+
         df_units = list(df[standard_units])
         df_values = list(df[standard_values])
         df_MW = list(df[molecular_weight])
@@ -68,7 +72,7 @@ class Filters:
                     new_value = df_values[df_units_index]
 
                 elif current_df_units == 'nM':
-                    new_value = df_values[df_units_index] * 1000
+                    new_value = df_values[df_units_index] / 1000
                 
                 new_value_list.append(new_value)
 
@@ -90,7 +94,7 @@ class Filters:
                     new_value = (df_values[df_units_index] / df_MW[df_units_index]) * 1000
 
                 elif current_df_units == 'uM':
-                    new_value = df_values[df_units_index] / 1000
+                    new_value = df_values[df_units_index] * 1000
 
                 elif current_df_units == 'nM':
                     new_value = df_values[df_units_index]
