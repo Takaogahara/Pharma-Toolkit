@@ -4,9 +4,7 @@ import os
 import pandas as pd
 import streamlit as st
 
-# from apps.backend.dataset_filter.filters import Filters
-from backend.dataset_filter.filters import Filters #! FIXME: DELETE
-
+from apps.backend.dataset_filter.filters import Filters
 
 def _fileDownload(df, dname, text):
     '''Provide dataframe for download'''
@@ -31,7 +29,7 @@ def app():
 
     with st.sidebar.header('Upload your CSV data'):
         uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
-        exemple_file = pd.read_csv('./backend/dataset_filter/example_csv.csv', delimiter=';')
+        exemple_file = pd.read_csv('./apps/backend/dataset_filter/example_csv.csv', delimiter=';')
         st.sidebar.markdown(_fileDownload(exemple_file, 'example_csv', 'Download example CSV file'), unsafe_allow_html=True)
 
     if uploaded_file is None:
@@ -65,7 +63,7 @@ def app():
 
             #@ Save selections
             if st.sidebar.button('Done!'):
-                df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
 
             st.markdown(""" --- """)
 
@@ -75,7 +73,7 @@ def app():
 
     #@ ----------------------------------------------------------------------------------------------------------
     try:
-        selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+        selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
     except:
         st.info('Awaiting column selection.')
 
@@ -88,10 +86,10 @@ def app():
         with st.beta_expander('Remove NaN'):
             st.markdown("""### Remove NaN""")
             if st.button('Remove NaN'):
-                selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                 selected_df = Filters.removeNaN(selected_df)
-                selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
 
         #@ -------------------------------
         #@ Filter elements
@@ -103,10 +101,10 @@ def app():
 
             if st.button('Filter Elements'):
                 try:
-                    selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                    selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                     selected_df = Filters.removeElements(selected_df, smilesColumn)
-                    selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                    selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
                 except:
                     st.error('Selected column is incompatiple')
 
@@ -122,10 +120,10 @@ def app():
             selected_organism = st.multiselect('Select target organisms', unique_organism, None)
 
             if st.button('Filter Organism'):
-                selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                 selected_df = Filters.removeStrain(selected_df, selected_organism, organismColumn)
-                selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)     
+                selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)     
 
         #@ -------------------------------
         #@ Set threshold
@@ -145,10 +143,10 @@ def app():
                 st.error('Please provide a valid value. (Decimal separator is ".")')
 
             if st.button('Convert values'):
-                selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                 selected_df = Filters.convertThreshold(selected_df, threshold_value, selected_threshold_unit, selected_threshold)
-                selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
         
         #@ -------------------------------
         #@ Check duplicates
@@ -159,10 +157,10 @@ def app():
             selected_duplicates = st.multiselect('Select: ID, Activity, Value (IN THIS ORDER)', index_threshold, None)
 
             if st.button('Check duplicates'):
-                selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                 selected_df = Filters.checkDuplicates(selected_df, selected_duplicates)
-                selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
 
 
         #@ -------------------------------
@@ -174,10 +172,10 @@ def app():
             selected_remove = st.multiselect('Select columns to removal', index_remove, None)
 
             if st.button('Drop columns'):
-                selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                 selected_df = Filters.dropColumns(selected_df, selected_remove)
-                selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
 
         #@ -------------------------------
         #@ Shuffle dataset
@@ -185,10 +183,10 @@ def app():
         with st.beta_expander('Shuffle dataset'):
             st.markdown("""### Shuffle dataset""")
             if st.button('Shuffle dataset'):
-                selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+                selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
 
                 selected_df = Filters.shuffleRows(selected_df)
-                selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+                selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
 
 
         #@ -------------------------------
@@ -199,17 +197,13 @@ def app():
             #@ Check number of entries, NaN values
             st.markdown(""" --- """)
             st.markdown("""### Data""")
-            selected_df.to_csv('./backend/dataset_filter/selected_columns.csv', index=False)
+            selected_df.to_csv('./apps/backend/dataset_filter/selected_columns.csv', index=False)
             df_num = selected_df.shape[0]
             nan_num = sum(selected_df.isna().sum())
             st.info(f'Number of molecules: {df_num}')
             st.info(f'NaN values: {nan_num}')
 
             #@ Display selected dataset
-            selected_df = pd.read_csv('./backend/dataset_filter/selected_columns.csv')
+            selected_df = pd.read_csv('./apps/backend/dataset_filter/selected_columns.csv')
             st.write(selected_df)
             st.markdown(_fileDownload(selected_df, 'filtered_csv', 'Download CSV File'), unsafe_allow_html=True)
-
-app() #! FIXME: DELETE
-
-#! FIXME: ./backend/ -> ./apps/backend/
